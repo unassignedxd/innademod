@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "innademod",
+	"version": "${version}",
+	"name": "Inna de Mod",
+	"description": "Inna de mod!!!!!!!!!!!!!",
+	"authors": [
+		"Blake (unassigned) :)!",
+		"street cred: hyper"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/innademod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.unassigned.innademod.InnaDeMod"
+		],
+		"client": [
+			"com.unassigned.innademod.InnaDeModClient"
+		],
+		"modmenu": [
+			"com.unassigned.innademod.gui.InnaDeModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"innademod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*",
+		"modmenu": "*",
+		"cloth-config": "*"
+	}
+}

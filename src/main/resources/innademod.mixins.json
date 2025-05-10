@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.unassigned.innademod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AdvancementBlockerMixin",
+    "GoatHornItemMixin"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

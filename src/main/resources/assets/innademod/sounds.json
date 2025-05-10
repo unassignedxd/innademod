@@ -1,0 +1,10 @@
+{
+  "entity.player.respawn": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "innademod:entity/player/return_by_death"
+      }
+    ]
+  }
+}

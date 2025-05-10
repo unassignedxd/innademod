@@ -1,0 +1,7 @@
+{
+  "text.autoconfig.innademod.title": "InnaDeMod Configuration",
+  "text.autoconfig.innademod.option.enableRespawnSound": "Enable Re:Zero respawn sound",
+  "text.autoconfig.innademod.option.enableCmdAliases": "Enable Command Aliases",
+  "text.autoconfig.innademod.option.blockedDimensions": "Blocked Dimensions",
+  "text.autoconfig.innademod.option.cmdAliases": "Command Aliases"
+}
