@@ -1,5 +1,6 @@
 package com.unassigned.innademod.mixin;
 
+import com.unassigned.innademod.InnaDeModAutoConfig;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.UseCooldownComponent;
 import net.minecraft.component.type.UseRemainderComponent;
@@ -31,7 +32,7 @@ public abstract class ItemStackMixin {
             itemStack = useRemainderComponent.convert((ItemStack)(Object)this, i, var10003, user::giveOrDropStack);
         }
 
-        if (useCooldownComponent != null && !(stack.getItem() instanceof WindChargeItem)) {
+        if (useCooldownComponent != null && (!(stack.getItem() instanceof WindChargeItem && InnaDeModAutoConfig.INSTANCE.bypassWindChargeCooldown))) {
             useCooldownComponent.set(stack, user);
         }
 

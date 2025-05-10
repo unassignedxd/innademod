@@ -24,6 +24,12 @@ public class InnaDeModAutoConfig implements ConfigData {
     @Comment("Play a custom sound when the player respawns")
     public boolean enableRespawnSound = true;
 
+    @Comment("Prevents wind charges from going on cooldown")
+    public boolean bypassWindChargeCooldown = true;
+
+    @Comment("Prevents goat horns from going on cooldown")
+    public boolean bypassGoatHornCooldown = true;
+
     @Comment("Enable command aliases like /c or /s")
     public boolean enableCmdAliases = true;
 

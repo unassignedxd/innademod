@@ -1,5 +1,6 @@
 package com.unassigned.innademod.mixin;
 
+import com.unassigned.innademod.InnaDeModAutoConfig;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.GoatHornItem;
 import net.minecraft.item.Instrument;
@@ -21,8 +22,11 @@ public class GoatHornItemMixin {
     // Injecting into the use() method of GoatHornItem
     @Inject(at = @At("RETURN"), method = "use(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;")
     public void onUse(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
-        ItemStack itemStack = user.getStackInHand(hand);
-        user.getItemCooldownManager().set(itemStack, 0);
+        if(InnaDeModAutoConfig.INSTANCE.bypassGoatHornCooldown)
+        {
+            ItemStack itemStack = user.getStackInHand(hand);
+            user.getItemCooldownManager().set(itemStack, 0);
+        }
     }
 
 }
