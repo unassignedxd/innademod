@@ -25,15 +25,4 @@ public class GoatHornItemMixin {
         user.getItemCooldownManager().set(itemStack, 0);
     }
 
-    @Inject(at = @At("HEAD"), method = "playSound", cancellable = true)
-    private static void playSound(World world, PlayerEntity player, Instrument instrument, CallbackInfo ci) {
-        // Replace the body of the method with the desired behavior
-        SoundEvent soundEvent = (SoundEvent) instrument.soundEvent().value();
-        float f = instrument.range() / 16.0F;
-        world.playSoundFromEntity(player, player, soundEvent, SoundCategory.RECORDS, f, 1.0F);
-
-        // Cancel further execution to skip emitting the GameEvent
-        ci.cancel();
-    }
-
 }
